@@ -1,4 +1,4 @@
-OC_manager
+autoTLC-MS_manager
 ===========
 
 # Shiny app to operate the autoTLC-MS interface
@@ -35,7 +35,6 @@ Crontab is a job scheduler for UNIX-like system. The file can be accessed with t
 ```
 sudo crontab -e
 ```
-
 Once in the editor, add this line which will launch the application at reboot. 
 
 ```
@@ -50,7 +49,7 @@ If a static IP had been set, the application will also be available at the IP (i
 Configure the browser to start with the custom URL https://127.0.0.1/.
 
 
-### Directly from R (in case of problem to catch the errors)
+### Directly from R (in case of problems to catch the errors)
 
 Being in a terminal: 
 
