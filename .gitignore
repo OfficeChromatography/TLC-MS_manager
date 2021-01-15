@@ -1,0 +1,13 @@
+
+*.jpg
+*.Rproj
+test
+tests
+gcode/Method.gcode
+.Rproj.user
+tables_old/
+eat_tables_old/
+methods/
+admin\.R
+
+\.Rhistory

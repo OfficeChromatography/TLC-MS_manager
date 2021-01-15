@@ -1,0 +1,2 @@
+Time;Step;File;Log;Visa;Plate
+20210112_13:36:35;Connection;NA;Board connection;admin;

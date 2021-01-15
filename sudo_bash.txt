@@ -1,0 +1,1 @@
+sudo bash TLC-MS_manager/TLC-MS_manager_install.sh |& tee TLC-MS_manager-install.txt
