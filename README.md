@@ -20,9 +20,9 @@ git clone https://github.com/OfficeChromatography/TLC-MS_manager.git
 
 ### Installation
 
-In the downloaded folder home/pi/TLC-MS_manager, you will find an installation script to be executed (last updated and tested 2021-01-15). Therefore, open the file sudo_bash.txt, and copy the command line into the terminal.
+In the downloaded folder ```home/pi/TLC-MS_manager```, you will find an installation script to be executed (last updated and tested 2021-01-15). Therefore, open the file ```sudo_bash.txt```, and copy the command line into the terminal.
 
-In case of installation problems, the log file TLC-MS_manager-install.txt (in home/pi) can be checked for error messages concerning, for example, missing dependencies.
+In case of installation problems, the log file ```TLC-MS_manager-install.txt``` (in home/pi) can be checked for error messages concerning, for example, missing dependencies.
 
 
 
