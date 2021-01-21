@@ -1,2 +1,6 @@
 Time;Step;File;Log;Visa;Plate
 20210112_10:36:48;TLC_MS;gcode/Method.gcode;gcode/Method.gcode;admin;test
+20210120_15:10:02;Connection;NA;Board connection;admin;
+20210120_15:18:09;Connection;NA;Board connection;admin;
+20210121_11:01:01;Connection;NA;Board connection;admin;
+20210121_11:11:28;Connection;NA;Board connection;admin;

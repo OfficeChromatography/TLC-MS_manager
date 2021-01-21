@@ -56,7 +56,7 @@ dashboardPage(
                      uiOutput("Serial_port_connectUI") # show an actionButton only if connect$login is TRUE and set connect$board to TRUE
               ),
               actionButton("Shutdown","Shutdown"),
-              actionButton("Reboot","Reboot")#,
+              actionButton("Reboot","Reboot")
               
               ),
       # First tab content
