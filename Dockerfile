@@ -31,7 +31,6 @@ RUN R -e "install.packages('shinyalert', repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_version('rgl', version = '0.100.54', repos='http://cran.rstudio.com/')"
 RUN R -e "devtools::install_github('jrowen/rhandsontable')"
 
-
 RUN mkdir /TLC-MS_manager
 WORKDIR /TLC-MS_manager
 COPY ./ /TLC-MS_manager

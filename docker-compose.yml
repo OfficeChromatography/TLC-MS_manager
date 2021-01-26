@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  app:
+    restart: "always"
+    build: .
+    container_name: tlcms_manager_cont
+    image: tlcms_manager
+    ports:
+      - "8000:8000" # Map 8000 to 8000 of our docker image
+    privileged: true
+    volumes:
+      - ./:/TLC-MS_manager # Map ./app directory en docker app folder
+    cap_add:
+      - SYS_ADMIN
+    devices:
+      - '/dev:/dev'
+    command: >
+      sh -c "R -e 'shiny::runApp(port=8000, host=\"0.0.0.0\", launch.browser=\"false\")'"
+#      R -e \"shiny::runApp(port=8000, host="0.0.0.0" ,launch.browser="false")'"
