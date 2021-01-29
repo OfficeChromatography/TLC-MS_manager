@@ -11,13 +11,14 @@ echo "Are you ready to start? (y/n)"
 read userinput
 if [ "$userinput" == "y" ]
 then
-  echo "Installing r-base"
-  yes | sudo apt-get install r-base
+  #echo "Installing r-base"
+  #yes | sudo apt-get install r-base
   echo ""
   echo "Installing libraries"
-  yes | sudo apt-get install libssl-dev libcurl4-openssl-dev r-cran-rgl libtiff5-dev python-serial git
+  yes | sudo apt-get install libssl-dev libcurl4-openssl-dev r-cran-rgl libtiff5-dev
   yes | sudo apt-get install libssh2-1-dev libboost-atomic-dev libxml2-dev
   yes | sudo apt-get install mesa-common-dev libglu1-mesa-dev libx11-dev libgit2-dev
+  yes | sudo apt-get install libpython2.7
   echo ""
   echo "Removing packages not used anymore"
   yes | sudo apt autoremove
@@ -34,6 +35,7 @@ then
   yes | sudo su - -c "R -e \"install.packages('shinyBS', repos='http://cran.rstudio.com/')\""
   yes | sudo su - -c "R -e \"install.packages('shinyalert', repos='http://cran.rstudio.com/')\""
   yes | sudo su - -c "R -e \"devtools::install_version('rgl', version = '0.100.54', repos='http://cran.rstudio.com/')\""
+  yes | sudo su - -c "R -e \"devtools::install_github('DimitriF/DLC')\""
   yes | sudo su - -c "R -e \"devtools::install_github('jrowen/rhandsontable')\""
   echo ""
   echo "Performing reboot"
