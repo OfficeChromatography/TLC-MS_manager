@@ -20,10 +20,10 @@ dashboardPage(
     sidebarMenu(
                 menuItem("Connection", tabName = "Connect",icon=icon("home")),
                 # menuItem("Method", tabName = "Method",icon=icon("tasks")),
-                menuItem("Fine control", tabName = "test_ink",icon=icon("wrench")),
                 # menuItem("Visualization",tabName = "Visu",icon=icon("camera")),
                 menuItem("TLC-MS",tabName = "TLC_MS",icon=icon("spoon")),
-                menuItem("Log",tabName = "Log",icon=icon("newspaper-o")),
+                menuItem("GCODE upload", tabName = "test_ink",icon=icon("wrench")),
+                #menuItem("Log",tabName = "Log",icon=icon("newspaper-o")),
                 # menuItem("Report",tabName = "Report",icon=icon("print")),
                 menuItem("Read me",tabName = "About",icon=icon("info"))
     )

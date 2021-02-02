@@ -54,7 +54,7 @@ output$TLC_MS_control_1 = renderUI({
     tabPanel("Input/output",
              sidebarLayout(
                sidebarPanel(width = 3,
-                            fileInput("TLC_MS_fileInput",label = "Picture(s) file(s)",multiple = T),
+                            fileInput("TLC_MS_fileInput",label = "Image upload",multiple = T),
                             downloadButton("TLC_MS_down_csv","Download CSV"),
                             downloadButton("TLC_MS_down_gcode","Download gcode"),
                             numericInput("TLC_MS_elution_time","Elution [s]",20),
@@ -396,7 +396,7 @@ observeEvent(input$TLC_MS_manual_rinsing,{
 
 TLC_MS_files <- reactive({
   validate(
-    need(!is.null(input$TLC_MS_fileInput), "Please upload the pictures")#,
+    need(!is.null(input$TLC_MS_fileInput), "Please upload the image")#,
     # need(!grepl("csv",input$TLC_MS_fileInput$name),"No pictures for csv files")
   )
   if(grepl("csv",input$TLC_MS_fileInput$name)){
@@ -417,7 +417,7 @@ observeEvent(input$TLC_MS_fileInput,{
 })
 TLC_MS_files_name<- reactive({
   validate(
-    need(!is.null(input$TLC_MS_fileInput), "Please upload the pictures")
+    need(!is.null(input$TLC_MS_fileInput), "Please upload the image")
   )
   input$TLC_MS_fileInput$name
 })
@@ -480,14 +480,14 @@ output$TLC_MS_pict.1.zoom <- renderPlot({
 })
 output$TLC_MS_pict.2 <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 1, "Not enough pictures")
+    need(length(TLC_MS_files()) > 1, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[2]],main=TLC_MS_files_name()[2],xlim=c(0,TLC_MS_x_width),ylim=c(0,TLC_MS_y_height))
 })
 output$TLC_MS_pict.2.zoom <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 1, "Not enough pictures")
+    need(length(TLC_MS_files()) > 1, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[2]],main=TLC_MS_files_name()[2],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
@@ -498,14 +498,14 @@ output$TLC_MS_pict.2.zoom <- renderPlot({
 })
 output$TLC_MS_pict.3 <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 2, "Not enough pictures")
+    need(length(TLC_MS_files()) > 2, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[3]],main=TLC_MS_files_name()[3],xlim=c(0,TLC_MS_x_width),ylim=c(0,TLC_MS_y_height))
 })
 output$TLC_MS_pict.3.zoom <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 2, "Not enough pictures")
+    need(length(TLC_MS_files()) > 2, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[3]],main=TLC_MS_files_name()[3],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
@@ -516,14 +516,14 @@ output$TLC_MS_pict.3.zoom <- renderPlot({
 })
 output$TLC_MS_pict.4 <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 3, "Not enough pictures")
+    need(length(TLC_MS_files()) > 3, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[4]],main=TLC_MS_files_name()[4],xlim=c(0,TLC_MS_x_width),ylim=c(0,TLC_MS_y_height))
 })
 output$TLC_MS_pict.4.zoom <- renderPlot({
   validate(
-    need(length(TLC_MS_files()) > 3, "Not enough pictures")
+    need(length(TLC_MS_files()) > 3, "")
   )
   par(mar=c(0,0,0,0))
   raster(TLC_MS_files()[[4]],main=TLC_MS_files_name()[4],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
