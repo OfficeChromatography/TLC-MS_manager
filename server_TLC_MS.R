@@ -493,7 +493,8 @@ output$TLC_MS_pict.2.zoom <- renderPlot({
   raster(TLC_MS_files()[[2]],main=TLC_MS_files_name()[2],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
   if(!is.null(TLC_MS_coord$x)){
     text(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,label=seq(length(TLC_MS_coord$x)),col=input$TLC_MS_color,pos = 3)
-    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
+    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(4*10,length(TLC_MS_coord$x)),rep(2*10,length(TLC_MS_coord$x))))
+    # symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
   }
 })
 output$TLC_MS_pict.3 <- renderPlot({
@@ -511,7 +512,8 @@ output$TLC_MS_pict.3.zoom <- renderPlot({
   raster(TLC_MS_files()[[3]],main=TLC_MS_files_name()[3],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
   if(!is.null(TLC_MS_coord$x)){
     text(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,label=seq(length(TLC_MS_coord$x)),col=input$TLC_MS_color,pos = 3)
-    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
+    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(4*10,length(TLC_MS_coord$x)),rep(2*10,length(TLC_MS_coord$x))))
+    # symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
   }
 })
 output$TLC_MS_pict.4 <- renderPlot({
@@ -529,7 +531,8 @@ output$TLC_MS_pict.4.zoom <- renderPlot({
   raster(TLC_MS_files()[[4]],main=TLC_MS_files_name()[4],xlim=TLC_MS_zoom$x,ylim=TLC_MS_zoom$y)
   if(!is.null(TLC_MS_coord$x)){
     text(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,label=seq(length(TLC_MS_coord$x)),col=input$TLC_MS_color,pos = 3)
-    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
+    symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(4*10,length(TLC_MS_coord$x)),rep(2*10,length(TLC_MS_coord$x))))
+    # symbols(x=TLC_MS_coord$x*10,y=TLC_MS_coord$y*10,fg=input$TLC_MS_color,inches = F,add = T,rectangles = cbind(rep(input$TLC_MS_head_width*10,length(TLC_MS_coord$x)),rep(input$TLC_MS_head_height*10,length(TLC_MS_coord$x))))
   }
 })
 

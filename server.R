@@ -8,7 +8,10 @@
 library(shiny)
 # library(rPython)
 library(reticulate)
-library(DLC)
+# library(DLC)
+library(jpeg)
+library(png)
+# library(tiff)
 library(serial)#for port detection in windows
 library(rhandsontable) #devtools::install_github("rhandsontable","jrowen")
 library(parallel)
@@ -19,6 +22,7 @@ library(shinyalert)
 
 shinyServer(function(input, output,session) {
   source("config.R")
+  source("minDLC.R")
   
   # connect = reactiveValues(login = login, board = board,Visa = NULL)
   connect = reactiveValues(login = login, board = board,Visa = "admin")
@@ -28,9 +32,9 @@ shinyServer(function(input, output,session) {
   source("server_Fine_control.R",local = T)
   # source("server_Method.R",local = T)  
 
-  # main = py_run_file("setup_old.py")
+  main = py_run_file("setup_old.py")
   
-  main = py_run_file("setup.py")
+  # main = py_run_file("setup.py")
   # python.load("setup.py")
   # python.load("setup_old.py")
   
