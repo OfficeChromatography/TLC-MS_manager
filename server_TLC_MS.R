@@ -54,9 +54,9 @@ output$TLC_MS_control_1 = renderUI({
     tabPanel("Input/output",
              sidebarLayout(
                sidebarPanel(width = 3,
-                            fileInput("TLC_MS_fileInput",label = "Image upload",multiple = T),
+                            fileInput("TLC_MS_fileInput",label = "Image/CSV upload",multiple = T),
                             downloadButton("TLC_MS_down_csv","Download CSV"),
-                            downloadButton("TLC_MS_down_gcode","Download gcode"),
+                            downloadButton("TLC_MS_down_gcode","Download GCODE"),
                             numericInput("TLC_MS_elution_time","Elution [s]",20),
                             numericInput("TLC_MS_rinsing_time","Pausing [s]",20),
                             actionButton("TLC_MS_manual", "Manual control",icon = icon("edit")),
@@ -208,7 +208,7 @@ output$TLC_MS_control_manual_2 = renderUI({
           verbatimTextOutput("TLC_MS_biases"),
           numericInput("TLC_MS_manual_go_X","X",if(length(TLC_MS_coord$x) == 0){100}else{TLC_MS_coord$x[position]}),
           numericInput("TLC_MS_manual_go_Y","Y",if(length(TLC_MS_coord$y) == 0){50}else{TLC_MS_coord$y[position]}),
-          actionButton("TLC_MS_manual_go","Go (validate)"),
+          actionButton("TLC_MS_manual_go","Go to position"),
 	  actionButton("start_MS","Start MS")
 )
 })
