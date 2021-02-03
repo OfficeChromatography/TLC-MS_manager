@@ -30,24 +30,36 @@ then
   echo ""
   yes | sudo apt-get install libpython2.7
   echo ""
+  yes | sudo apt-get update
   echo "Removing packages not used anymore"
-  yes | sudo apt autoremove
+  yes | sudo apt-get autoremove
+  echo ""
+  yes | sudo apt-get update
   echo ""
   echo "Installing R packages"
   echo ""
   yes | sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
-  yes | sudo su - -c "R -e \"devtools::install_version('later', version = '1.1.0.1', repos='http://cran.rstudio.com/')\""
-  yes | sudo su - -c "R -e \"remotes::install_github('rwehrens/ChemometricsWithR')\""
+  yes | sudo upt-get update
+  # yes | sudo su - -c "R -e \"devtools::install_version('later', version = '1.1.0.1', repos='http://cran.rstudio.com/')\""
+  # yes | sudo su - -c "R -e \"remotes::install_github('rwehrens/ChemometricsWithR')\""
   yes | sudo su - -c "R -e \"devtools::install_github('rstudio/shiny')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"devtools::install_github('rstudio/shinydashboard')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"devtools::install_version('serial', version = '3.0', repos='http://cran.rstudio.com/')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"devtools::install_version('reticulate', version = '1.16', repos='http://cran.rstudio.com/')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"install.packages('shinyBS', repos='http://cran.rstudio.com/')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"install.packages('shinyalert', repos='http://cran.rstudio.com/')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"devtools::install_version('rgl', version = '0.100.54', repos='http://cran.rstudio.com/')\""
+  yes | sudo apt-get update
   yes | sudo su - -c "R -e \"devtools::install_github('OfficeChromatography/DLC')\""
   yes | sudo su - -c "R -e \"devtools::install_github('jrowen/rhandsontable')\""
   echo ""
+  yes | sudo apt-get update
   echo "Performing reboot"
   sudo reboot
 else
