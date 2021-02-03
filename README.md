@@ -12,20 +12,26 @@ Follow [this link](https://jlubox.uni-giessen.de/dl/fi5d7vosAXVt6w1cAmn4RBZ2/OC_
 
 ## Manual Installation using the installation script
 
-### Clone this github repository
+First install the git library:
+
+```sudo apt install git```
+
+The clone this github repository:
 
 ```
 git clone https://github.com/OfficeChromatography/TLC-MS_manager.git
 ```
 
-### Installation
+### Installation on NUC with Ubuntu 16.04 LTS installed
 
-In the downloaded folder ```home/pi/TLC-MS_manager```, you will find an installation script (TLC-MS_manager_install.sh) to be executed (last updated and tested 2021-01-15). Therefore, open the file ```sudo_bash.txt```, and copy the command line into the terminal.
+In the downloaded folder ```home/pi/TLC-MS_manager```, you will find an installation script (TLC-MS_manager_Ubuntu-16-04_install.sh) to be executed (last updated and tested 2021-01-15). Therefore, open the file ```sudo_bash.txt```, and copy the repective command line into the terminal.
 
-In case of installation problems, the log file ```TLC-MS_manager-install.txt``` (in home/pi) can be checked for error messages concerning, for example, missing dependencies.
+In case of installation problems, the log file ```TLC-MS_manager-Ubuntu_install.txt``` (in home/pi) can be checked for error messages concerning, for example, missing dependencies.
 
+### Installation on Raspberry Pi 4B with Raspbian OS installed
 
-
+There is a different installation script for the Raspberry Pi in the downloaded folder ```home/pi/TLC-MS_manager```. Use the respective sudo bash command to be found in the file ```sudo_bash.txt```.
+Unfortunately, the new Ubuntu 20.10 OS for the Raspberry Pi 4B does not work, because it uses the R version 4.0.2 that is not compatible with the autoTLC-MS_manager.
 ## Run
 
 ### Started at reboot with crontab
