@@ -39,7 +39,7 @@ then
   echo "Installing R packages"
   echo ""
   yes | sudo su - -c "R -e \"install.packages('devtools', repos='http://cran.rstudio.com/')\""
-  yes | sudo upt-get update
+  yes | sudo apt-get update
   # yes | sudo su - -c "R -e \"devtools::install_version('later', version = '1.1.0.1', repos='http://cran.rstudio.com/')\""
   # yes | sudo su - -c "R -e \"remotes::install_github('rwehrens/ChemometricsWithR')\""
   yes | sudo su - -c "R -e \"devtools::install_github('rstudio/shiny')\""
