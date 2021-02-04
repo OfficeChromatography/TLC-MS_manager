@@ -9,7 +9,7 @@ output$ink_test_control_1 = renderUI({
            # actionButton("test_ink_G28_X0","Home X"),
            # actionButton("test_ink_G28_Y0","Home Y"),
            # actionButton("test_ink_G28_Z0","Home Z"),
-           actionButton("test_ink_M84","Disable Motors"),
+           actionButton("test_ink_M84","Disable Motors")
            # uiOutput("temp_1"),
            # actionButton("test_ink_LED","LED gcode in pin 63 (for testing only)"),
            # actionButton("test_ink_LED_stop","Stop_LED (for testing only)")
