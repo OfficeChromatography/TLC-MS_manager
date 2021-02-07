@@ -6,7 +6,7 @@ It is devided into three main functions, which can be accessed via the main menu
 
 ## Connection tab
 
-![Connection tab screenshot](Connection_tab.png)
+![Connection tab screenshot](Connection_tab.tiff)
 
 Before you can use the autoTLC-MS interface, you have to establish a connection between the interface and the TLC-MS_manager software. 
 Click on the **connection tab**.
@@ -18,13 +18,13 @@ With the help of the buttons on the left side ("disconnect", "Manage users", "Pr
 
 ## TLC-MS tab
 
-Click on the **TLC-MS tab**. Under this tab you can find all functions necessary for automated TLC-MS measurements.
+![TLC-MS tab screenshot](TLC-MS_tab.tiff)
 
-![TLC-MS tab screenshot](TLC-MS_tab.png)
+Click on the **TLC-MS tab**. Under this tab you can find all functions necessary for automated TLC-MS measurements.
 
 ### Image upload and zone selection
 
-![Image upload](Image_upload.png)
+![Image upload](Image_upload.tiff)
 
 Click on the "Input/output" tab in the top left corner. 
 Images (file formats .jpg, .png, .bmp, .tif) of chromatograms can be uploaded by clicking on the "Browse" button under "Image/CSV upload". 
@@ -58,7 +58,7 @@ To download commands as G-code, click on the "Download GCODE" button.
 
 ### Profile selection
 
-![Profile menu screenshot](Profile_menu.png)
+![Profile menu screenshot](Profile_menu.tiff)
 
 Before you can run a batch, it is important to choose the right elution profile.
 Click on the "Options" tab to enter the profile selection menu. 
@@ -78,7 +78,7 @@ Enter a color under "Color on plots" to change the color of the squares on the i
 
 ### Manual control
 
-![Manual control screenshot](Manual_control.png)
+![Manual control screenshot](Manual_control.tiff)
 
 The manual control menu provides all functions necessary for manual TLC-MS measurements. 
 Click on the "LED on" button to switch on the LED. If the LED is on, the same button displays "LED off". Use this button to switch off the LED.
@@ -121,7 +121,7 @@ Click on the "Run batch" button to start the run. Note that after you have start
 
 ## GCODE upload tab
 
-![GCODE upload tab screenshot](GCODE_upload_tab.png)
+![GCODE upload tab screenshot](GCODE_upload_tab.tiff)
 
 Click on the **GCODE upload tab**. It can be used to try out G-code commands, for example after modification of the autoTLC-MS interface
 or if you would like to test which pin is responsible for which function. 
