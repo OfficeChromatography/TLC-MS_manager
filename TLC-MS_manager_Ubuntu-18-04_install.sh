@@ -48,7 +48,7 @@ then
   echo ""
   yes | sudo apt-get install python-pip
   echo ""
-  yes | sudo apt-get install libpython2.7
+  # yes | sudo apt-get install libpython2.7
   echo ""
   yes | sudo apt-get update
   echo ""

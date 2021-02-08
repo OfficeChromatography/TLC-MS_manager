@@ -58,7 +58,7 @@ To download commands as G-code, click on the "Download GCODE" button.
 
 ### Profile selection
 
-![Profile menu screenshot](Profile_menu.tiff)
+![Profile menu screenshot](Profile_menu.png)
 
 Before you can run a batch, it is important to choose the right elution profile.
 Click on the "Options" tab to enter the profile selection menu. 

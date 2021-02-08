@@ -26,9 +26,6 @@ then
   echo ""
   yes | sudo apt-get install mesa-common-dev libglu1-mesa-dev libx11-dev libgit2-dev
   echo ""
-  # echo "Installing Python 2.7"
-  echo ""
-  # yes | sudo apt-get install libpython2.7
   echo ""
   yes | sudo apt-get update
   echo "Removing packages not used anymore"
