@@ -41,7 +41,7 @@ sudo apt upgrade
 ```
 
 
-## Alternatively, manual Installation on NUC with Ubuntu 18.04.5 LTS installed, using the installation script
+## Alternatively, manual installation of TLC-MS_manager on NUC with Ubuntu 18.04.5 LTS installed, using the installation script
 
 First install the git library:
 
@@ -81,7 +81,7 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-## Manual Installation on a Raspberry Pi 4B with an OS installed, using the installation script
+## Alternatively, manual installation of TLC-MS_manager on a Raspberry Pi 4B with an OS installed, using the installation script
 
 There is a different installation script for the Raspberry Pi in the downloaded folder ```home/pi/TLC-MS_manager```. Use the respective sudo bash command to be found in the file ```sudo_bash.txt```.
 
