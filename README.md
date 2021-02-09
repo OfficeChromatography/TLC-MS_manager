@@ -1,7 +1,7 @@
 autoTLC-MS_manager installation
 ===========
 
-![TLC-MS_manager screenshot](TLC-MS_manager.jpg)
+![TLC-MS_manager screenshot](TLC-MS_manager.png)
 
 ## Ubuntu 18.04.5 LTS image
 
