@@ -16,27 +16,27 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
   <body>
     <h1 id="autotlc-ms_manager-installation">autoTLC-MS_manager installation</h1>
     <p>
-      <img src="TLC-MS_manager.jpg" alt="TLC-MS_manager screenshot" />
+      <img src="TLC-MS_manager.png" alt="TLC-MS_manager screenshot" />
     </p>
     <h2 id="ubuntu-18.04.5-lts-image">Ubuntu 18.04.5 LTS image</h2>
-    <p>Follow <a href="https://jlubox.uni-giessen.de/dl/fi3pKFDKArQEdTxdwdA8bkHB/TLCMS_Ubuntu18.gz">this link</a> to download an image of Ubuntu 18.04.5 with the installed TLC-MS_manager, last updated: 2021-02-10 (3.5 GB), and copy it onto an USB stick.</p>
+    <p>Follow <a href="https://jlubox.uni-giessen.de/dl/fi3pKFDKArQEdTxdwdA8bkHB/TLCMS_Ubuntu18.gz">this link</a> to download an image of Ubuntu 18.04.5 with the installed TLC-MS_manager, last updated: 2021-02-10 (3.7 GB), and copy it onto an USB stick.</p>
     <p>Higher versions of Ubuntu cannot be used, because some needed libraries are not available for Ubuntu &gt;18.</p>
-    <p>To flash the image, boot the NUC from DVD (Ubuntu 18.04.5 LTS) and select "Try Ubuntu without installation" (Live-CD). <br /></p>
+    <p>To flash the image, boot the NUC from DVD (Ubuntu 18.04.5 LTS) (Live-CD). <br /></p>
     <ul>
       <li>Therefore, download Ubuntu 18 (<a href="https://releases.ubuntu.com/18.04/">https://releases.ubuntu.com/18.04/</a>) and flash the ISO onto a DVD.</li>
       <li>Attach the DVD to the NUC and start the PC. On booting select "Try Ubuntu without installation" and wait for the booting process.</li>
       <li>Attach the USB stick with the downloaded image file (TLCMS_Ubuntu18.gz).<br /></li>
       <li>Open a terminal and type:</li>
       <li>
-        <code>sudo fdisk -l</code> to identify the SSD (typically /dev/sda) and the USB stick (typically /dev/sdb).<br /></li>
+        <code>sudo fdisk -l</code> to identify the NUC-SSD (typically /dev/sda) and the USB stick (typically /dev/sdb).<br /></li>
       <li>Mount the USB stick to the folder /mnt:
 <code>sudo mount /dev/sdb /mnt</code><br /></li>
       <li>Unmount the SSD:
-<code>sudo umount /dev/sda</code> followed by <code>sudo su</code><br /></li>
+<code>sudo umount /dev/sda</code> followed by <code>sudo su</code>, to get root privileges <br /></li>
       <li>Start flashing with: <code>cat /mnt/TLCMS_Ubuntu18.gz | gunzip -d -c | dd of =/dev/sda bs=32k</code>.<br /></li>
       <li>After finishing, check the values of 'in' and 'out', which should be fully identical, if nothing went wrong.<br /></li>
       <li>Reboot the NUC while detaching the DVD.</li>
-      <li>User name: tlcms, password: tlcms</li>
+      <li>User name: pi, password: tlcms</li>
       <li>Configure Ubuntu for your purposes (language, keyboard).</li>
       <li>Configure a proper time server:</li>
     </ul>
@@ -58,7 +58,7 @@ sudo reboot
 sudo apt upgrade
 </code>
     </pre>
-    <h2 id="alternatively-manual-installation-on-nuc-with-ubuntu-18.04.5-lts-installed-using-the-installation-script">Alternatively, manual Installation on NUC with Ubuntu 18.04.5 LTS installed, using the installation script</h2>
+    <h2 id="alternatively-manual-installation-of-tlc-ms_manager-on-nuc-with-ubuntu-18.04.5-lts-already-installed-using-the-installation-script">Alternatively, manual installation of TLC-MS_manager on NUC with Ubuntu 18.04.5 LTS already installed, using the installation script</h2>
     <p>First install the git library:</p>
     <p>
       <code>sudo apt install git</code>
@@ -71,7 +71,7 @@ sudo apt upgrade
     <p>In the downloaded folder <code>home/TLC-MS_manager</code>, there is an installation script (TLC-MS_manager_Ubuntu-18-04_install.sh) to be executed (last updated and tested 2021-02-10). Therefore, open the file <code>sudo_bash.txt</code>, and copy the repective command line into the terminal.</p>
     <p>In case of installation problems, the log file <code>TLC-MS_manager-Ubuntu_install.txt</code> (in home/) can be checked for error messages concerning, for example, missing dependencies.</p>
     <h2 id="raspberry-pi-4b-image">Raspberry Pi 4B image</h2>
-    <p>Follow <a href="https://jlubox.uni-giessen.de/dl/fiUZYxykrZFXuFq645QXKEC6/TLCMS_RPi4.img.gz">this link</a> to download an image of a Raspberry Pi OS with the installed TLC-MS_manager, last updated 2021-02-10 (2.2 GB).</p>
+    <p>Follow <a href="https://jlubox.uni-giessen.de/dl/fiUZYxykrZFXuFq645QXKEC6/TLCMS_RPi4.img.gz">this link</a> to download an image of a Raspberry Pi OS with the installed TLC-MS_manager, last updated 2021-02-10 (2.1 GB).</p>
     <ul>
       <li>Flash the image onto an SD card (&gt;= 16 GB), best using the Raspberry Pi Imager (<a href="https://www.raspberrypi.org/software/">https://www.raspberrypi.org/software/</a>).</li>
       <li>Insert the SD card into the Raspberry Pi 4B and boot the system.</li>
@@ -97,7 +97,7 @@ sudo reboot
 sudo apt-get upgrade
 </code>
     </pre>
-    <h2 id="manual-installation-on-a-raspberry-pi-4b-with-an-os-installed-using-the-installation-script">Manual Installation on a Raspberry Pi 4B with an OS installed, using the installation script</h2>
+    <h2 id="alternatively-manual-installation-of-tlc-ms_manager-on-a-raspberry-pi-4b-with-an-os-already-installed-using-the-installation-script">Alternatively, manual installation of TLC-MS_manager on a Raspberry Pi 4B with an OS already installed, using the installation script</h2>
     <p>There is a different installation script for the Raspberry Pi in the downloaded folder <code>home/pi/TLC-MS_manager</code>. Use the respective sudo bash command to be found in the file <code>sudo_bash.txt</code>.</p>
     <p>Unfortunately, the new Ubuntu 20.10 OS for the Raspberry Pi 4B does not work, because some needed libraries are not available for this OS.</p>
     <h2 id="run">Run</h2>
@@ -106,15 +106,13 @@ sudo apt-get upgrade
     <p>
       <code>sudo crontab -e</code>
     </p>
-    <p>Once in the editor, add this line for Ubuntu 18, which will launch the application at reboot:</p>
-    <p>
-      <code>@reboot Rscript /home/TLC-MS_manager/app_exec.R</code>
-    </p>
-    <p>For the Raspberry Pi, add this line:</p>
+    <p>Once in the editor, add this line for both the NUC and Raspberry Pi:</p>
     <p>
       <code>@reboot Rscript /home/pi/TLC-MS_manager/app_exec.R</code>
     </p>
-    <p>After reboot, the TLC-MS_manager will be available in the PC browser at <a href="https://127.0.0.1">https://127.0.0.1</a>. Therefore, best configure the browser to start with the custom URL <a href="https://127.0.0.1/">https://127.0.0.1/</a>.</p>
+    <p>After reboot, the TLC-MS_manager will be available in the NUC-PC Firefox browser at <a href="https://127.0.0.1">https://127.0.0.1</a>. <br />
+Therefore, best configure the browser to start with the custom URL <a href="https://127.0.0.1/">https://127.0.0.1/</a>. <br /></p>
+    <p>At the Raspberry Pi 4B with the Google Chrome browser, the localhost is available at <a href="http://127.0.0.1">http://127.0.0.1</a>. <br /></p>
     <p>If a static IP had been set, the application will also be available at the IP (in the browser) from a remote computer in the network.</p>
     <h3 id="directly-from-r-in-case-of-problems-to-catch-the-errors">Directly from R (in case of problems to catch the errors)</h3>
     <p>Being in a terminal:</p>
