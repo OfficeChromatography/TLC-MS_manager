@@ -101,7 +101,7 @@ Once in the editor, add this line for both the NUC and Raspberry Pi:
 
 
 After reboot, the TLC-MS_manager will be available in the browser at http://127.0.0.1 (localhost). <br />
-Therefore, best configure the browser to start with the custom URL https://127.0.0.1/. <br />
+Therefore, best configure the browser to start with the custom URL http://127.0.0.1/. <br />
 
 If a static IP had been set, the application will also be available at the IP (in the browser) from a remote computer in the network.
 
