@@ -1,4 +1,4 @@
-autoTLC-MS_manager installation
+TLC-MS_manager installation
 ===========
 
 ![TLC-MS_manager screenshot](TLC-MS_manager.png)
@@ -15,13 +15,12 @@ To flash the image, boot the NUC from DVD (Ubuntu 18.04.5 LTS) (Live-CD). <br />
 - Attach the USB stick with the downloaded image file (TLCMS_Ubuntu18.gz).<br />
 - Open a terminal and type:
 - ```sudo fdisk -l``` to identify the NUC-SSD (typically /dev/sda) and the USB stick (typically /dev/sdb).<br />
-- Mount the USB stick to the folder /mnt:
-```sudo mount /dev/sdb /mnt``` <br />
+- With ```df -l```  the information is given, under which name the USB stick is mounted, for example /media/ubuntu/NAME.
 - Unmount the SSD:
 ```sudo umount /dev/sda``` followed by ```sudo su```, to get root privileges <br />
-- Start flashing with: ```cat /mnt/TLCMS_Ubuntu18.gz | gunzip -d -c | dd of =/dev/sda bs=32k```.<br />
+- Start flashing with: <br />```cat /media/ubuntu/NAME/TLCMS_Ubuntu18.gz | gunzip -d -c | dd of =/dev/sda bs=32k```.<br />
 - After finishing, check the values of 'in' and 'out', which should be fully identical, if nothing went wrong.<br />
-- Reboot the NUC while detaching the DVD.
+- Reboot the NUC while detaching the DVD on command.
 - User name: pi, password: tlcms
 - Configure Ubuntu for your purposes (language, keyboard).
 - Configure a proper time server:

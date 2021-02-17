@@ -14,7 +14,7 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
         </style>
   </head>
   <body>
-    <h1 id="autotlc-ms_manager-installation">autoTLC-MS_manager installation</h1>
+    <h1 id="tlc-ms_manager-installation">TLC-MS_manager installation</h1>
     <p>
       <img src="TLC-MS_manager.png" alt="TLC-MS_manager screenshot" />
     </p>
@@ -29,13 +29,12 @@ td, h1, h2, h3, h4, h5, p, ul, ol, li {
       <li>Open a terminal and type:</li>
       <li>
         <code>sudo fdisk -l</code> to identify the NUC-SSD (typically /dev/sda) and the USB stick (typically /dev/sdb).<br /></li>
-      <li>Mount the USB stick to the folder /mnt:
-<code>sudo mount /dev/sdb /mnt</code><br /></li>
+      <li>With <code>df -l</code>  the information is given, under which name the USB stick is mounted, for example /media/ubuntu/NAME.</li>
       <li>Unmount the SSD:
 <code>sudo umount /dev/sda</code> followed by <code>sudo su</code>, to get root privileges <br /></li>
-      <li>Start flashing with: <code>cat /mnt/TLCMS_Ubuntu18.gz | gunzip -d -c | dd of =/dev/sda bs=32k</code>.<br /></li>
+      <li>Start flashing with: <br /><code>cat /media/ubuntu/NAME/TLCMS_Ubuntu18.gz | gunzip -d -c | dd of =/dev/sda bs=32k</code>.<br /></li>
       <li>After finishing, check the values of 'in' and 'out', which should be fully identical, if nothing went wrong.<br /></li>
-      <li>Reboot the NUC while detaching the DVD.</li>
+      <li>Reboot the NUC while detaching the DVD on command.</li>
       <li>User name: pi, password: tlcms</li>
       <li>Configure Ubuntu for your purposes (language, keyboard).</li>
       <li>Configure a proper time server:</li>
