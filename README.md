@@ -1,9 +1,12 @@
 TLC-MS_manager installation
 ===========
+The TLC-MS_manager is an open-source software to control the [autoTLC-MS interface](https://github.com/OfficeChromatography/autoTLC-LC-MS). 
 
 ![TLC-MS_manager screenshot](TLC-MS_manager.png)
 
-## Ubuntu 18.04.5 LTS image
+There are four options to install the TLC-MS_manager as follows.
+
+## Ubuntu 18.04.5 LTS image for a NUC PC
 
 Follow [this link](https://jlubox.uni-giessen.de/dl/fi3pKFDKArQEdTxdwdA8bkHB/TLCMS_Ubuntu18.gz) to download an image of Ubuntu 18.04.5 with the installed TLC-MS_manager, last updated: 2021-02-10 (3.7 GB), and copy it onto an USB stick.
 
@@ -40,7 +43,7 @@ sudo apt upgrade
 ```
 
 
-## Alternatively, manual installation of TLC-MS_manager on NUC with Ubuntu 18.04.5 LTS already installed, using the installation script
+## Alternatively, manual installation of TLC-MS_manager on a NUC PC with Ubuntu 18.04.5 LTS already installed, using the installation script
 
 First install the git library:
 
@@ -56,12 +59,12 @@ In the downloaded folder ```home/TLC-MS_manager```, there is an installation scr
 
 In case of installation problems, the log file ```TLC-MS_manager-Ubuntu_install.txt``` (in home/) can be checked for error messages concerning, for example, missing dependencies.
 
-## Raspberry Pi 4B image
+## Raspberry Pi OS image
 
 Follow [this link](https://jlubox.uni-giessen.de/dl/fiUZYxykrZFXuFq645QXKEC6/TLCMS_RPi4.img.gz) to download an image of a Raspberry Pi OS with the installed TLC-MS_manager, last updated 2021-02-10 (2.1 GB).
 
 - Flash the image onto an SD card (>= 16 GB), best using the Raspberry Pi Imager (https://www.raspberrypi.org/software/).
-- Insert the SD card into the Raspberry Pi 4B and boot the system.
+- Insert the SD card into the Raspberry Pi 4B with 4 GB RAM and boot the system.
 - Configure the Raspberry Pi for your purposes (language, keyboard).
 - User name: pi, password: tlcms
 - Configure a proper time server:
@@ -86,9 +89,10 @@ There is a different installation script for the Raspberry Pi in the downloaded 
 
 Unfortunately, the new Ubuntu 20.10 OS for the Raspberry Pi 4B does not work, because some needed libraries are not available for this OS.
 
-## Run
+Starting the TLC-MS_manager
+===========
 
-### Started at reboot with crontab
+### Starting at reboot with crontab
 
 Crontab is a job scheduler for UNIX-like system. The file can be accessed with the following command and the lines inside will be executed at the appropriate moment.
 
@@ -106,7 +110,7 @@ If a static IP had been set, the application will also be available at the IP (i
 
 
 
-### Directly from R (in case of problems to catch the errors)
+### Starting directly from R (in case of problems to catch the errors)
 
 Being in a terminal: 
 
@@ -117,9 +121,9 @@ Being in a terminal:
 ```shiny::runApp()```
 
 
-## Documentation
+Documentation
+===========
+An instruction manual (pdf) is available in the downloaded folder ```TLC-MS_manager/Instruction```.
 
-A pdf is available in the downloaded folder ```TLC-MS_manager/Instruction```.
-
-The same instruction is also available in the "Read me" tab of the TLC-MS_manager software.
+The same instruction manual is also available in the "Read me" tab of the TLC-MS_manager software.
 
