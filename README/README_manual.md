@@ -53,12 +53,12 @@ etc.
 The CSV file is translated into a batch and the elution positions are marked with red squares.
 If you would like to control the marked positions with the help of a plate image, you can upload images after you have uploaded the CSV file.
 To delete the batch, click on "Delete all".
-To download the batch in a CSV format, click on the "Download CSV" button.
+For documentation of manually chosen elution zones, download the batch in a CSV format by clicking on the "Download CSV" button before running a batch.
 To download commands as G-code, click on the "Download GCODE" button.
 
 ### Profile selection
 
-![Profile menu screenshot](Profile_menu.tiff)
+![Profile menu screenshot](Profile_menu.png)
 
 Before you can run a batch, it is important to choose the right elution profile.
 Click on the "Options" tab to enter the profile selection menu. 
@@ -116,7 +116,9 @@ For this way of adjustment, it is recommended to verify that the LED is correctl
 After you have chosen all positions for elution or uploaded a CSV file, chosen the right profile 
 and have adjusted the positioning bias, everything is ready for your zones to be eluted.
 In the "Input/output" tab, enter the desired elution time and rinsing time (waiting time in between elutions) into the fields.
-Click on the "Run batch" button to start the run. Note that after you have started a batch, there is no option to stop the run.
+Click on the "Run batch" button to start the run. Note that after you have started a batch, there is no option to stop the run with the help of the software.
+In case of any problems, you need to disconnect the NUC PC or Raspberry Pi from the power supply. 
+To rapidly restore manually chosen elution zones, upload the CSV file you have downloaded before running the batch.
 
 
 ## GCODE upload tab
