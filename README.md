@@ -8,7 +8,7 @@ There are four options to install the TLC-MS_manager as follows.
 
 ## Ubuntu 18.04.5 LTS image for a NUC PC
 
-Follow [this link](https://jlubox.uni-giessen.de/dl/fi3pKFDKArQEdTxdwdA8bkHB/TLCMS_Ubuntu18.gz) to download an image of Ubuntu 18.04.5 with the installed TLC-MS_manager, last updated: 2021-02-10 (3.7 GB), and copy it onto an USB stick.
+Follow [this link](https://jlubox.uni-giessen.de/dl/fiS1DuZWMhX1CquP85W91DAH/TLCMS_Ubuntu18.gz) to download an image of Ubuntu 18.04.5 with the installed TLC-MS_manager, last updated: 2021-02-10 (3.7 GB), and copy it onto an USB stick.
 
 Higher versions of Ubuntu cannot be used, because some needed libraries are not available for Ubuntu >18.
 
@@ -61,7 +61,7 @@ In case of installation problems, the log file ```TLC-MS_manager-Ubuntu_install.
 
 ## Raspberry Pi OS image
 
-Follow [this link](https://jlubox.uni-giessen.de/dl/fiUZYxykrZFXuFq645QXKEC6/TLCMS_RPi4.img.gz) to download an image of a Raspberry Pi OS with the installed TLC-MS_manager, last updated 2021-02-10 (2.1 GB).
+Follow [this link](https://jlubox.uni-giessen.de/dl/fiRNKg1Dqw4yQx3GqeLjAsrp/TLCMS_RPi4.img.gz) to download an image of a Raspberry Pi OS with the installed TLC-MS_manager, last updated 2021-02-10 (2.1 GB).
 
 - Flash the image onto an SD card (>= 16 GB), best using the Raspberry Pi Imager (https://www.raspberrypi.org/software/).
 - Insert the SD card into the Raspberry Pi 4B with 4 GB RAM and boot the system.
